@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="netflix.css">
+    <link rel="icon" type="image" href="netflix.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+    background-color: black;
+    background-image: radial-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("Netflix-Background.png");
+    background-repeat: no-repeat;
+    padding: 10px;
+    margin: 0px;
+    scroll-behavior:smooth;
+}
+img{
+    width:10%;
+    padding-left: 15px;
+    display: inline-block;
+}
+nav{
+    display: inline-block;
+    padding:28px;
+    padding-left: 3px;
+
+}
+#sel{
+    display: flex;
+    width:110px;
+    height:30px;
+    background-color: black;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    float:right;
+    margin:5px;
+    margin-top:28px;
+}
+button{
+    display: inline-block;
+    width:100px;
+    height:30px;
+    background-color: red;
+    color:white;
+    border: 2px solid red;
+    border-radius:30px;
+    margin-left:1050px;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+.Link{
+    text-decoration: none;
+    font-weight: bold;
+}
+.Link:visited{
+    color:white;
+}
+.Link:link{
+    color:white;
+}
+#one{
+    padding-top: 250px;
+    margin-bottom: 100px;
+    color:white;
+    font-size: 60px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-left: 150px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    height:470px;
+}
+#two{
+    font-size: 16px;
+    padding-bottom:10px ;
+}
+#three{
+    font-size:16px;
+    color:rgba(173, 163, 163, 0.989);
+}
+input{
+    background-color: black;
+    color: rgb(210, 200, 200);
+    min-width:30%;
+    font-family:Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    border-radius: 3%;
+    height: 45.3px;
+    border: 2px solid grey;
+}
+#start{
+    background-color: red;
+    color:white;
+    min-width:16%;
+    height:45.3px;
+    border-radius:3%;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    margin:40px;
+    border:3px solid red;
+}
+#four{
+    font-family:  Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+#line{
+    width:100%;
+    height:250%;
+    border: radius 20px;;
+}
+
+@media (min-width: 960px) {
+    .default-ltr-cache-1f97ztc {
+        width: 150%;
+        left: -25%;
+    }
+}
+
+.boxes{
+    display: flex;
+    background-color: black;
+}
+.box1{
+    color:white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:20px;
+    width:250px;
+    margin-left:14%;
+    background-color: rgb(155, 7, 131);
+    border-radius:10px;
+}
+.box1:hover{
+    transform:scale(1.1);
+    transition:1s;
+    background-color: rgb(88, 3, 74);
+    cursor:pointer;
+}
+.box2{
+    color:white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:20px;
+    width:250px;
+    margin-left:3%;
+    background-color: rgb(155, 7, 131);
+    border-radius:10px;
+}
+.box2:hover{
+    transform:scale(1.1);
+    transition:1s;
+    background-color: rgb(88, 3, 74);
+    cursor:pointer;
+}
+#sampText{
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:14%;
+    background-color: black;
+}
+.box3{
+    color:white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:20px;
+    width:250px;
+    margin-left:3%;
+    background-color: rgb(155, 7, 131);
+    border-radius:10px;
+}
+.box3:hover{
+    transform:scale(1.1);
+    transition:1s;
+    background-color: rgb(88, 3, 74);
+    cursor:pointer;
+}
+.box4{
+    color:white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:20px;
+    width:250px;
+    margin-left:14%;
+    background-color: rgb(15, 15, 92);
+    border-radius:10px;
+}
+.box5{
+    color:white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:20px;
+    width:250px;
+    margin-left:3%;
+    background-color: rgb(15, 15, 92);
+    border-radius:10px;
+}
+.box6{
+    color:white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:20px;
+    width:250px;
+    margin-left:3%;
+    background-color: rgb(29, 6, 84);
+    border-radius:10px;
+}
+.que{
+    margin-left:12%;
+    width:100%;
+    max-width:800px;
+   }
+   .que li{
+    list-style: none;
+    width:100%;
+    padding:5px;
+   }
+   .que li label{
+    display:flex;
+    align-items:center;
+    padding:20px;
+    font-size:24px;
+    font-weight:500;
+    background:grey;
+    color:white;
+    margin-bottom:2px;
+    cursor:pointer;
+    position:relative;
+    font-family: 'Times New Roman', Times, serif;
+   }
+   label::after{
+    content:'+';
+    font-size:34px;
+    position:absolute;
+    right:20px;
+    color:white;
+    transition:transform 0.5s;
+    
+   }
+   input[type="radio"]{
+        display:none;
+   }
+   .que .content{
+    background:grey;
+    text-align:left;
+    padding:0 20px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s,padding 0.5s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 23px;
+   }
+   .que input[type="radio"]:checked + label + .content{
+    max-height:600px;
+    padding:30px 20px;
+    color:white;
+   }
+   .que input[type="radio"]:checked + label::after{
+    transform:rotate(135deg);
+   }
+
+.queText{
+    color:white;
+    margin-left:14%;
+    font-size:25px;
+}
+.footText{
+    height:60px;
+    width:1000px;
+    color:white;
+    margin-left:20%;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#email{
+    margin-left:20%;
+    margin-bottom:20%;
+}
+#logo{
+    color:red;
+}
+#five{
+    margin-top:-5%;
+}
+#helpLine{
+    margin-top:-15%;
+    color:grey;
+    margin-left:10%;
+}
+.help1{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-left:14%;
+}
+.help2{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-left:14%;
+}
+.helpQue{
+    color:grey;
+}
+
+@media only screen and (max-width:600px){
+    body{
+        background-image:radial-gradient(0,0,0,0.3)(0,0,0,0.2),("Netflix-Background.png");
+        width:600px;
+    }
+    #one{
+        width:100%;
+        height:auto;
+    }
+    #start{
+        width:200px;
+    }
+    img{
+        width:100px;
+    }
+    button{
+        padding:5px 10px;
+    }
+    .langu{
+        padding:4px 8px;
+        margin:30px;
+    }
+    .Link{
+        float:left;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://pngshare.com/wp-content/uploads/2021/06/Netflix-Logo-Transparent-PNG-4-1024x317.png">
+        <button><a class="Link" href=signup.html>Sign-In</a></button>
+        <select class="langu" placeholder="TELUGU" id="sel">
+            <option id="lan" value="E">ENGLISH</option>
+            <option id="lan" value="H">HINDI</option>
+        </select>
+    </header>
+    <div id="one">
+               <b> Unlimited Movies,TV
+                <br>
+                shows and more.</b>
+            <div id="two">
+                    <br>
+                    Starts at ₹149. Cancel anytime.
+                <br>
+                <div id="three">
+                    <br>
+                    <br>
+                    Ready to watch? Enter your email to create or restart your membership.
+                </div>
+            </div>
+            <div>
+            <form id="four">
+                <input text="email" type="text"id="mail" placeholder="Email-address  " required>
+                <a href="https://www.netflix.com/in/" target="_blank"><button id="start" onclick="Register()">Get Started ></button></a>
+            </form>
+            </div>
+    </div id="container">
+    <p id="sampText">A plan to suit your needs</p>
+    <div class="boxes" >
+        <div class="box1">
+            <h1>PREMIUM</h1>
+            <p>A cinematic experience with the best picture and audio quality</p>
+            <h3>&#8377;649/month</h3>
+        </div>
+        <div class="box2">
+            <h1>Standard</h1>
+            <P>All the entertainment you love ,Full HD version </P>
+            <h3>&#8377;499/month</h3>
+        </div>
+        <div class="box3">
+            <h1>Basic</h1>
+            <P>A Great way to enjoy all your favourite shows and movies</P>
+            <h3>&#8377;199/month</h3>
+        </div>
+    </div>
+    <br>
+    <p id="sampText">More reasons to join</p>
+    <div class="boxes">
+        <div class="box4" style>
+            <h1>Enjoy On your TV</h1>
+            <P>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</P>
+        </div>
+        <div class="box5">
+            <h2>Download your shows to watch offline</h2>
+            <p>Save your favourites easily and always have something to watch</p>
+        </div>
+        <div class="box6">
+            <h1>Watch everywhere</h1>
+            <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV</p>
+        </div>
+    </div>
+    <h2 class="queText">Frequently Asked Questions</h2>
+    <div id="container">
+        <ul class="que">
+            <li>
+                <input type="radio" name="que" id="first">
+                <label for="first">What is Netflix?</label>
+                <div class="content">
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+        
+                    You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. 
+                   There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="que" id="second">
+                <label for="second">How much does Netflix cost?</label>
+                <div class="content">
+                <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. 
+                    Plans range from ₹149 to ₹649 a month. No extra costs, no contracts</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="que" id="third">
+                <label for="third">Where can I Watch?</label>
+                <div class="content">
+                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com 
+                    from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, 
+                    smartphones, tablets, streaming media players and game consoles.
+        
+                    You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and 
+                    without an internet connection. Take Netflix with you anywhere.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="que" id="four">
+                <label for="four">How do I cancel?</label>
+                <div class="content">
+                <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your 
+                    account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="que" id="fifth">
+                <label for="fifth">How Can I watch on Netlix?</label>
+                <div class="content">
+                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning 
+                    Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="que" id="sixth">
+                <label for="sixth">What is Netflix?</label>
+                <div class="content">
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+        
+                    You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. 
+                   There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </li>
+            </ul>
+            
+    </div>
+    <br>
+    <footer>
+        <p class="footText">Ready to watch? Enter your email or mobile number to create or restart your membership.</p>
+        <form id="five">
+            <input text="email" type="text" id="email" placeholder="Email-address  " required>
+            <a href="https://www.netflix.com/in/" target="_blank"><button id="start" onclick="Register()">Get Started ></button></a>
+        </form>
+        <p id="helpLine">Questions? Call 000-800-919-1694</p>
+        <div class="help1">
+            <a class="helpQue" href="#">FAQ</a>
+            <a class="helpQue" href="#">Help Center</a>
+            <a class="helpQue" href="#">Account</a>
+        </div>
+        <br>
+        <div class="help2">
+            <a class="helpQue" href="#">Media Center</a>
+            <a  class="helpQue" href="#">Jobs</a>
+            <a class="helpQue" href="#">ways To Watch</a>
+        </div>
+        <br>
+        <div class="help1">
+            <a class="helpQue" href="#">Privacy</a>
+            <a class="helpQue" href="#">Cookie Preferences</a>
+            <a class="helpQue" href="#">Corporate Information</a>
+        </div>
+        <br>
+        <div class="help1">
+            <a class="helpQue" href="#">Speed Test</a>
+            <a class="helpQue" href="#">Legal Notices</a>
+            <a class="helpQue" href="#">Contact Us</a>
+        </div>
+        <br>
+    </footer>
+    <script src="netflix.js"></script>
+</body>
+</html>
